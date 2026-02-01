@@ -3,10 +3,10 @@ package com.example;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class AppTest {
+class AppTest {
 
     @Test
-    public void testMainMethodExecutes() {
+    void testMainMethodExecutes() {
         // Test that main method runs (may throw SQLException in test environment without DB)
         // But should not throw other unexpected exceptions
         try {
