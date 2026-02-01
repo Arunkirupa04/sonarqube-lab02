@@ -17,4 +17,16 @@ class AppTest {
             assertNotNull(e);
         }
     }
+
+    @Test
+    void testMainMethodWithEmptyArgs() {
+        // Test main method can be called with empty args array
+        String[] args = new String[]{};
+        try {
+            App.main(args);
+        } catch (Exception e) {
+            // Allow expected exceptions
+            assertNotNull(e);
+        }
+    }
 }

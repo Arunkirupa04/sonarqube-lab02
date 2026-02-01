@@ -77,4 +77,24 @@ class CalculatorTest {
     void testAddAgain() {
         assertEquals(15, calculator.addAgain(10, 5));
     }
+
+    @Test
+    void testNegativeNumbers() {
+        assertEquals(-5, calculator.calculate(-10, 5, "add"));
+    }
+
+    @Test
+    void testLargeNumbers() {
+        assertEquals(1000000000, calculator.calculate(1000000000, 0, "add"));
+    }
+
+    @Test
+    void testPowerWithZero() {
+        assertEquals(1, calculator.calculate(5, 0, "pow"));
+    }
+
+    @Test
+    void testModuloWithRemainder() {
+        assertEquals(2, calculator.calculate(12, 5, "mod"));
+    }
 }
