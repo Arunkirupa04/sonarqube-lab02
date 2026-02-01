@@ -97,4 +97,38 @@ class CalculatorTest {
     void testModuloWithRemainder() {
         assertEquals(2, calculator.calculate(12, 5, "mod"));
     }
-}
+
+    @Test
+    void testDivideNegativeNumbers() {
+        assertEquals(-2, calculator.calculate(-10, 5, "div"));
+    }
+
+    @Test
+    void testMultiplyNegativeNumbers() {
+        assertEquals(-50, calculator.calculate(-10, 5, "mul"));
+    }
+
+    @Test
+    void testMultiplyByZero() {
+        assertEquals(0, calculator.calculate(10, 0, "mul"));
+    }
+
+    @Test
+    void testSubtractNegativeResult() {
+        assertEquals(-15, calculator.calculate(5, 20, "sub"));
+    }
+
+    @Test
+    void testPowerLargeExponent() {
+        assertEquals(59049, calculator.calculate(3, 10, "pow"));
+    }
+
+    @Test
+    void testCalculateWithNullOperation() {
+        assertEquals(0, calculator.calculate(10, 5, null));
+    }
+
+    @Test
+    void testCalculateWithEmptyOperation() {
+        assertEquals(0, calculator.calculate(10, 5, ""));
+    }
